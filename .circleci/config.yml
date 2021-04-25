@@ -5,10 +5,9 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
-  print_config: 
-   -echo <<pipline_id>>
-   command: |
-            echo $Shuchi
+  print_hello:
+    steps:
+      - run: echo $Shuchi
 
 workflows:
   # Name the workflow "welcome"
@@ -16,5 +15,5 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-      - print_config/run
+      
     
