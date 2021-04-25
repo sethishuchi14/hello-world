@@ -7,7 +7,8 @@ orbs:
 # Orchestrate or schedule a set of jobs
   print_config: 
    -echo <<pipline_id>>
-   -echo $Shuchi
+   command: |
+            echo $Shuchi
 
 workflows:
   # Name the workflow "welcome"
